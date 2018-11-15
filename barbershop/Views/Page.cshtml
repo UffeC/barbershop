@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Page>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+<div>
+    <h1>@Model.Content.GetPropertyValue("headline")</h1>
+    <p>@Model.Content.GetPropertyValue("summary")</p>
+    <p>@Model.Content.GetPropertyValue("companyName")</p>
+    <p>@Model.Content.GetPropertyValue("eMail")</p>
+    <p>@Model.Content.GetPropertyValue("facebook")</p>
+    <p>@Model.Content.GetPropertyValue("google")</p>
+    <p>@Model.Content.GetPropertyValue("twitter")</p>
+    <p>@Model.Content.GetPropertyValue("youtube")</p>
+</div>

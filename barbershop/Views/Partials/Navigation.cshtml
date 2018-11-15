@@ -1,0 +1,20 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+
+}
+<nav class="navbar">
+    <ul>
+        @foreach (var page in Model.Content.Site().Descendants())
+        {
+            if (page.Id == Model.Content.Id)
+            {
+                <li>@page.Name</li>
+            }
+            else
+            {
+                <li><a href="@page.Url">@page.Name</a></li>
+            }
+
+        }
+    </ul>
+</nav>

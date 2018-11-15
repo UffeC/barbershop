@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <title>@Model.Content.GetPropertyValue("title")</title>
+    <meta name="description" content="@Model.Content.GetPropertyValue("description")">
+</head>
+<body>
+    @Html.Partial("Navigation")
+    @RenderBody()
+</body>
+</html>

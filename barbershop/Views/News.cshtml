@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.News>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = null;
+}
+<div>
+    <h1>@Model.Content.GetPropertyValue("headline")</h1>
+    <p>@Model.Content.GetPropertyValue("summary")</p>
+</div>
